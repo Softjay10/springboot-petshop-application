@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Store</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <!-- Link to the JavaScript file -->
+    <script th:src="@{/js/script.js}"></script>
+</head>
+<body>
+<header>
+    <h1>Pet Store</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/employee}">New Employee</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Welcome to Our Pet Store!</h2>
+        <p>We have a wide variety of pets and pet supplies to choose from.</p>
+        <button onclick="showMore()">Show More</button>
+        <p id="more-info">Some of our most popular pets include dogs, cats, birds, and fish. We also carry food, toys,
+            and other supplies for your furry friends. Come visit us today!</p>
+    </section>
+    <section>
+        <h2>Meet Our Team!</h2>
+
+        <table th:if="${not #lists.isEmpty(employees)}">
+            <thead>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Role</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each=" employee : ${employees}">
+                <td th:text="${employee.id}"></td>
+                <td th:text="${employee.name}"></td>
+                <td th:text="${employee.role}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p th:if="${#lists.isEmpty(employees)}">There is no one in the team yet :(</p>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2021 Pet Store</p>
+</footer>
+</body>
+</html>

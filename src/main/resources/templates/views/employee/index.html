@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Store</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" th:href="@{/js/script.js}">
+</head>
+<body>
+<header>
+    <h1>Pet Store: New Employee Form</h1>
+    <nav>
+        <ul>
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{/employee}">New Employee</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2>Create a new employee record:</h2>
+        <p>Please make sure that all fields are entered!</p>
+    </section>
+    <section>
+        <form th:action="@{/employee}" th:object="${employee}" method="POST">
+            <p>Name: <input type="text" th:field="*{name}" /></p>
+            <p>Role: <input type="text" th:field="*{role}" /></p>
+            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2021 Pet Store</p>
+</footer>
+</body>
+</html>

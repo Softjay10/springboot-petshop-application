@@ -1,0 +1,154 @@
+/* Set default styles for all elements on the page */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Style the navigation bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #EEE;
+}
+
+/* Style the sections */
+section {
+    margin: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Style the "Show More" button */
+button {
+    background-color: #FFC0CB;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Style the "more info" paragraph that appears when the button is clicked */
+#more-info {
+    display: none;
+}
+
+/* Style the shop item list */
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+
+ul li {
+    margin: 10px;
+    padding: 10px;
+    background-color: #EEE;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 5px #CCC;
+}
+
+ul li img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+ul li h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul li p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #EEE;
+    padding: 20px;
+    text-align: center;
+}
